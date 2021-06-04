@@ -47,8 +47,10 @@ print( d )
 
 ## See also
 
-- [cubeSQL for Python2](https://github.com/andreaspfeil/CubeSQL.Python2)
-- [cubeSQL für .NET](https://github.com/andreaspfeil/CubeSQL.NET)
+- [cubeSQL.Python2](https://github.com/andreaspfeil/CubeSQL.Python2)
+- [cubeSQL.NET](https://github.com/andreaspfeil/CubeSQL.NET)
+- [cubeSQL.go](https://github.com/andreaspfeil/CubeSQL.go)
+
 
 ## License
 
