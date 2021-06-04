@@ -1,6 +1,6 @@
 # cubeSQL Python3 client
 
-Simple Python2 JSON client for the [cubeSQL](http://www.sqlabs.com/cubesql.php) database server.
+Simple Python3 JSON client for the [cubeSQL](http://www.sqlabs.com/cubesql.php) database server.
 
 ## Usage example
 
@@ -47,7 +47,7 @@ print( d )
 
 ## See also
 
-- [cubeSQL for Python3](https://github.com/andreaspfeil/CubeSQL.Python2)
+- [cubeSQL for Python2](https://github.com/andreaspfeil/CubeSQL.Python2)
 - [cubeSQL für .NET](https://github.com/andreaspfeil/CubeSQL.NET)
 
 ## License
