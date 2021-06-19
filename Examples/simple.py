@@ -10,7 +10,7 @@
 #  Date:        2021/06/03 21:58:48
 #  Author:      Andreas Pfeil <patreon@familie-pfeil.com>
 #
-#  Description: Opens a CubeSQL database connection with the JSON protocoll
+#  Description: Opens a cubeSQL database connection with the JSON protocoll
 #               Creates a table and inserts some rows, then selects the
 #               values and prints it on the screen
 #
