@@ -28,6 +28,7 @@ import random
 import base64
 import socket
 import binascii
+import time
 
 def sha1( data, binary = False ):
   if binary:
@@ -55,11 +56,25 @@ class CubeSQL:
         self.resetError()
         self.socket.sendall( json_request.encode( 'utf-8' ) )
         data = ""
+
+        wait = 0
         while( True ):
-          buf  = self.socket.recv( 4096 ).decode( 'utf-8' )
+          buf  = self.socket.recv( 65535 ).decode( 'utf-8' )
           data = data + buf
-          if( len( buf ) != 4096 ):
+
+          if( buf.endswith( "}" ) ):
             break
+          
+          if( len( buf ) == 65535 ):
+            wait = 0
+          else:
+            wait += 1
+            time.sleep( 0.1 )
+          
+          if wait == 10: # 10 x 100ms = 1000ms
+            self.errorCode    = -1
+            self.errorMessage = "Timout while receiving"
+            return
         
         try:
           data = json.loads( data )
